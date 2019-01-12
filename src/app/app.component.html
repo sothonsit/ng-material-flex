@@ -1,8 +1,8 @@
-<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+<div fxLayout="column" class="container" [class.is-mobile]="mobileQuery.matches">
   <app-top-bar></app-top-bar>
-  <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+  <mat-sidenav-container fxFlex>
 
-    <mat-sidenav #sidenav [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="!mobileQuery.matches" class="example-sidenav"
+    <mat-sidenav #sidenav [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="!mobileQuery.matches" class="sidenav"
       [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
       <app-side-nav [mobileQuery]="mobileQuery"></app-side-nav>
     </mat-sidenav>
